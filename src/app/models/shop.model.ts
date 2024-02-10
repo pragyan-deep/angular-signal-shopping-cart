@@ -16,6 +16,7 @@ export interface ICartItem {
     item_id: number;
     quantity: number;
     item?: IShopItem;
+    isSelected?: boolean;
 }
 
 export interface IGrandTotal {

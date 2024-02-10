@@ -9,5 +9,21 @@
 }
 
 .container {
-    padding: 20px
+    padding: 20px;
+    .contents {
+        display: flex;
+        .item {
+            flex: 2 1 auto;
+            .price {
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+.incrementor>mat-icon {
+    display: flex !important;
+    align-items: center !important;
+    height: 15px;
+    cursor: pointer;
 }
