@@ -2,6 +2,9 @@
 
 Use of angular signal and its reactivity in the form of a shopping cart
 
+## Link to the app
+([Shopcart](https://shopcart-1rc6dvnp5-pragyans-projects.vercel.app))
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
 
 ## Development server
