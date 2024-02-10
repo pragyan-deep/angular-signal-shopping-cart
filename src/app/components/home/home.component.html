@@ -1,0 +1,30 @@
+<mat-tab-group>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon>home</mat-icon>
+        </ng-template>
+        <ng-template matTabContent>
+            <app-shop></app-shop>
+        </ng-template>
+    </mat-tab>
+    <!-- <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon> list_alt</mat-icon>
+        </ng-template>
+        <ng-template matTabContent>
+            <app-orders></app-orders>
+        </ng-template>
+    </mat-tab> -->
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <mat-icon [matBadge]="cartStore.itemsInCart()" matBadgeColor="warn">shopping_cart</mat-icon>
+            <!-- Include text description of the icon's meaning for screen-readers -->
+            <span class="cdk-visually-hidden">
+                Count of items in cart
+            </span>
+        </ng-template>
+        <ng-template matTabContent>
+            <app-cart></app-cart>
+        </ng-template>
+    </mat-tab>
+  </mat-tab-group>

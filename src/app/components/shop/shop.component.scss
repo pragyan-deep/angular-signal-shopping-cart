@@ -1,0 +1,18 @@
+.example-card {
+    margin: 30px;
+    img {
+        margin: 15px;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 350px);
+    // background: #FAF9F6;
+}
+
+.action {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

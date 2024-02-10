@@ -1,0 +1,13 @@
+.example-card>mat-card-content {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+
+    img {
+        height: 100%;
+    }
+}
+
+.container {
+    padding: 20px
+}
