@@ -1,5 +1,5 @@
 <div class="container">
-    <ng-container *ngFor="let item of shopStore.shopItems()">
+    @for (item of shopStore.shopItems(); track $index) {
         <mat-card class="example-card">
             <mat-card-header>
                 <mat-card-title>{{item.name}}</mat-card-title>
@@ -16,5 +16,7 @@
                 </div>
             </mat-card-actions>
         </mat-card>
-    </ng-container>
+    } @empty {
+        <p>There are no items in shop</p>
+    }
 </div>

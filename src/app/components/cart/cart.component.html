@@ -2,45 +2,49 @@
     <h1>Shopping Cart</h1>
     <div class="contents">
         <div class="item">
-            <ng-container *ngFor="let cartItem of cartStore.cartItemsToShow();  trackBy: trackByFn">
-                <mat-card class="example-card">
-                    <mat-card-content>
-                        <div>
-                            <mat-checkbox [(ngModel)]="cartItem.isSelected" (ngModelChange)="updateSelection(cartItem)">
-                            </mat-checkbox>
-                        </div>
-                        <div>
-                            <img mat-card-image [src]="cartItem.item?.image" alt="Photo of a {{cartItem.item?.name}}">
-                        </div>
-                        <div class="price">
-                            <mat-card-title>{{cartItem.item?.name}}</mat-card-title>
-                            <mat-card-subtitle>{{cartItem.item?.price | currency:'INR':true}}</mat-card-subtitle>
-                            <mat-card-subtitle>
-                                <div class="d-flex flex-direction-row">
-                                    <div class="d-flex align-items-center"> Qty: {{cartItem.quantity}}</div>
-                                    <div class="d-flex flex-direction-column incrementor">
-                                        <mat-icon (click)="increaseQuantity(cartItem)">arrow_drop_up</mat-icon>
-                                        <mat-icon (click)="decreaseQuantity(cartItem)">arrow_drop_down</mat-icon>
-                                    </div>
+            @for (cartItem of cartStore.cartItemsToShow(); track trackByFn) {
+            <mat-card class="example-card">
+                <mat-card-content>
+                    <div>
+                        <mat-checkbox [(ngModel)]="cartItem.isSelected" (ngModelChange)="updateSelection(cartItem)">
+                        </mat-checkbox>
+                    </div>
+                    <div>
+                        <img mat-card-image [src]="cartItem.item?.image" alt="Photo of a {{cartItem.item?.name}}">
+                    </div>
+                    <div class="price">
+                        <mat-card-title>{{cartItem.item?.name}}</mat-card-title>
+                        <mat-card-subtitle>{{cartItem.item?.price | currency:'INR':true}}</mat-card-subtitle>
+                        <mat-card-subtitle>
+                            <div class="d-flex flex-direction-row">
+                                <div class="d-flex align-items-center"> Qty: {{cartItem.quantity}}</div>
+                                <div class="d-flex flex-direction-column incrementor">
+                                    <mat-icon (click)="increaseQuantity(cartItem)">arrow_drop_up</mat-icon>
+                                    <mat-icon (click)="decreaseQuantity(cartItem)">arrow_drop_down</mat-icon>
                                 </div>
-                            </mat-card-subtitle>
+                            </div>
+                        </mat-card-subtitle>
 
-                            <p>{{cartItem.item?.description}}</p>
-                        </div>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <div class="action">
-                            <button mat-raised-button (click)="removeFromCart(cartItem)">Remove</button>
-                        </div>
-                    </mat-card-actions>
-                </mat-card>
-            </ng-container>
+                        <p>{{cartItem.item?.description}}</p>
+                    </div>
+                </mat-card-content>
+                <mat-card-actions>
+                    <div class="action">
+                        <button mat-raised-button (click)="removeFromCart(cartItem)">Remove</button>
+                    </div>
+                </mat-card-actions>
+            </mat-card>
+            } @empty {
+            <p>There are no items in your cart</p>
+            }
         </div>
+        @if(cartStore.cartItemsToShow().length){
         <div class="item">
             <h2>Total:</h2>
             <h4>{{cartStore.total() | currency:'INR':true}}</h4>
             <button mat-raised-button color="accent">Buy now</button>
         </div>
+        }
     </div>
 
 </div>

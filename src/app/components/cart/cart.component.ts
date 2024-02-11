@@ -1,5 +1,5 @@
-import { CurrencyPipe, NgFor } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { CurrencyPipe } from '@angular/common';
+import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -11,7 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [MatCardModule, NgFor, MatButtonModule, CurrencyPipe, MatCheckboxModule, FormsModule, MatIconModule],
+  imports: [MatCardModule, MatButtonModule, CurrencyPipe, MatCheckboxModule, FormsModule, MatIconModule],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })
