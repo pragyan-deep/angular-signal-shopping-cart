@@ -3,9 +3,9 @@
         <ng-template mat-tab-label>
             <mat-icon>home</mat-icon>
         </ng-template>
-        <ng-template matTabContent>
-            <app-shop></app-shop>
-        </ng-template>
+        @defer {
+        <app-shop></app-shop>
+        }
     </mat-tab>
     <!-- <mat-tab>
         <ng-template mat-tab-label>
@@ -23,8 +23,8 @@
                 Count of items in cart
             </span>
         </ng-template>
-        <ng-template matTabContent>
-            <app-cart></app-cart>
-        </ng-template>
+        @defer {
+        <app-cart></app-cart>
+        }
     </mat-tab>
-  </mat-tab-group>
+</mat-tab-group>
