@@ -3,8 +3,8 @@ import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { CartStoreService } from '../../stores/cart-store/cart-store.service';
-import { ICartItem } from '../../models/shop.model';
+import { CartStoreService } from '../../../stores/cart-store/cart-store.service';
+import { ICartItem } from '../../../models/shop.model';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 

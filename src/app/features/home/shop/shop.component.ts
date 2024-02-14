@@ -2,9 +2,9 @@ import { Component, inject } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import { CurrencyPipe } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
-import { ShopStoreService } from '../../stores/shop-store/shop-store.service';
-import { CartStoreService } from '../../stores/cart-store/cart-store.service';
-import { ICartItem, IShopItem } from '../../models/shop.model';
+import { ShopStoreService } from '../../../stores/shop-store/shop-store.service';
+import { CartStoreService } from '../../../stores/cart-store/cart-store.service';
+import { ICartItem, IShopItem } from '../../../models/shop.model';
 
 @Component({
   selector: 'app-shop',

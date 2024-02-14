@@ -4,9 +4,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 
-import { ShopComponent } from '../shop/shop.component';
-import { CartComponent } from '../cart/cart.component';
-import { OrdersComponent } from '../orders/orders.component';
+import { ShopComponent } from './shop/shop.component';
+import { CartComponent } from './cart/cart.component';
+import { OrdersComponent } from './orders/orders.component';
 import { CartStoreService } from '../../stores/cart-store/cart-store.service';
 
 @Component({
